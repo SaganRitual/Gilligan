@@ -7,19 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41199952BFD8A8200F4EC33 /* AVFadeTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41199942BFD8A8200F4EC33 /* AVFadeTo.swift */; };
+		D41199972BFD8CD000F4EC33 /* AVFadeBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41199962BFD8CD000F4EC33 /* AVFadeBy.swift */; };
+		D41199992BFE4CDB00F4EC33 /* AVSetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41199982BFE4CDB00F4EC33 /* AVSetColor.swift */; };
+		D411999B2BFE507700F4EC33 /* AVSetColorBlendFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411999A2BFE507700F4EC33 /* AVSetColorBlendFactor.swift */; };
 		D491741B2BF8F0BF00640EDA /* GilliganApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491741A2BF8F0BF00640EDA /* GilliganApp.swift */; };
 		D491741D2BF8F0BF00640EDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491741C2BF8F0BF00640EDA /* ContentView.swift */; };
 		D491741F2BF8F0C000640EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D491741E2BF8F0C000640EDA /* Assets.xcassets */; };
 		D49174222BF8F0C000640EDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49174212BF8F0C000640EDA /* Preview Assets.xcassets */; };
+		D491742A2BF8F12C00640EDA /* ArenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174292BF8F12C00640EDA /* ArenaView.swift */; };
+		D491742D2BF8F41300640EDA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491742C2BF8F41300640EDA /* DashboardView.swift */; };
+		D491742F2BF918DB00640EDA /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491742E2BF918DB00640EDA /* ToolsView.swift */; };
+		D49174312BF91B4200640EDA /* ActionsEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174302BF91B4200640EDA /* ActionsEditView.swift */; };
+		D49174332BF924B200640EDA /* ActionsEditDisplayAttributesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174322BF924B200640EDA /* ActionsEditDisplayAttributesView.swift */; };
+		D49174352BF9259500640EDA /* ActionsEditSpaceAttributesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174342BF9259500640EDA /* ActionsEditSpaceAttributesView.swift */; };
+		D49174372BF95FFB00640EDA /* ActionsSliderView+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174362BF95FFB00640EDA /* ActionsSliderView+CGFloat.swift */; };
+		D491743B2BFCFA0600640EDA /* ActionsSliderView+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491743A2BFCFA0600640EDA /* ActionsSliderView+TimeInterval.swift */; };
+		D491743F2BFCFFFB00640EDA /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491743E2BFCFFFB00640EDA /* Tokens.swift */; };
+		D49174422BFD00D400640EDA /* ActionTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174412BFD00D400640EDA /* ActionTokens.swift */; };
+		D49174442BFD011600640EDA /* EntityTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174432BFD011600640EDA /* EntityTokens.swift */; };
+		D49174462BFD022E00640EDA /* GremlinTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49174452BFD022E00640EDA /* GremlinTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D41199942BFD8A8200F4EC33 /* AVFadeTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFadeTo.swift; sourceTree = "<group>"; };
+		D41199962BFD8CD000F4EC33 /* AVFadeBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFadeBy.swift; sourceTree = "<group>"; };
+		D41199982BFE4CDB00F4EC33 /* AVSetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVSetColor.swift; sourceTree = "<group>"; };
+		D411999A2BFE507700F4EC33 /* AVSetColorBlendFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVSetColorBlendFactor.swift; sourceTree = "<group>"; };
 		D49174172BF8F0BF00640EDA /* Gilligan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gilligan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D491741A2BF8F0BF00640EDA /* GilliganApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GilliganApp.swift; sourceTree = "<group>"; };
 		D491741C2BF8F0BF00640EDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D491741E2BF8F0C000640EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D49174212BF8F0C000640EDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D49174232BF8F0C000640EDA /* Gilligan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gilligan.entitlements; sourceTree = "<group>"; };
+		D49174292BF8F12C00640EDA /* ArenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenaView.swift; sourceTree = "<group>"; };
+		D491742C2BF8F41300640EDA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		D491742E2BF918DB00640EDA /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		D49174302BF91B4200640EDA /* ActionsEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsEditView.swift; sourceTree = "<group>"; };
+		D49174322BF924B200640EDA /* ActionsEditDisplayAttributesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsEditDisplayAttributesView.swift; sourceTree = "<group>"; };
+		D49174342BF9259500640EDA /* ActionsEditSpaceAttributesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsEditSpaceAttributesView.swift; sourceTree = "<group>"; };
+		D49174362BF95FFB00640EDA /* ActionsSliderView+CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionsSliderView+CGFloat.swift"; sourceTree = "<group>"; };
+		D491743A2BFCFA0600640EDA /* ActionsSliderView+TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionsSliderView+TimeInterval.swift"; sourceTree = "<group>"; };
+		D491743E2BFCFFFB00640EDA /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		D49174412BFD00D400640EDA /* ActionTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTokens.swift; sourceTree = "<group>"; };
+		D49174432BFD011600640EDA /* EntityTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTokens.swift; sourceTree = "<group>"; };
+		D49174452BFD022E00640EDA /* GremlinTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GremlinTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +65,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D41199932BFD8A3000F4EC33 /* ActionEditViews */ = {
+			isa = PBXGroup;
+			children = (
+				D41199962BFD8CD000F4EC33 /* AVFadeBy.swift */,
+				D41199942BFD8A8200F4EC33 /* AVFadeTo.swift */,
+				D41199982BFE4CDB00F4EC33 /* AVSetColor.swift */,
+				D411999A2BFE507700F4EC33 /* AVSetColorBlendFactor.swift */,
+			);
+			path = ActionEditViews;
+			sourceTree = "<group>";
+		};
 		D491740E2BF8F0BF00640EDA = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +95,9 @@
 		D49174192BF8F0BF00640EDA /* Gilligan */ = {
 			isa = PBXGroup;
 			children = (
+				D491742B2BF8F3FC00640EDA /* Views */,
+				D49174402BFD00C000640EDA /* Tokens */,
 				D491741A2BF8F0BF00640EDA /* GilliganApp.swift */,
-				D491741C2BF8F0BF00640EDA /* ContentView.swift */,
 				D491741E2BF8F0C000640EDA /* Assets.xcassets */,
 				D49174232BF8F0C000640EDA /* Gilligan.entitlements */,
 				D49174202BF8F0C000640EDA /* Preview Content */,
@@ -67,6 +111,34 @@
 				D49174212BF8F0C000640EDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D491742B2BF8F3FC00640EDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D41199932BFD8A3000F4EC33 /* ActionEditViews */,
+				D49174302BF91B4200640EDA /* ActionsEditView.swift */,
+				D49174322BF924B200640EDA /* ActionsEditDisplayAttributesView.swift */,
+				D49174342BF9259500640EDA /* ActionsEditSpaceAttributesView.swift */,
+				D49174362BF95FFB00640EDA /* ActionsSliderView+CGFloat.swift */,
+				D491743A2BFCFA0600640EDA /* ActionsSliderView+TimeInterval.swift */,
+				D49174292BF8F12C00640EDA /* ArenaView.swift */,
+				D491742C2BF8F41300640EDA /* DashboardView.swift */,
+				D491741C2BF8F0BF00640EDA /* ContentView.swift */,
+				D491742E2BF918DB00640EDA /* ToolsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D49174402BFD00C000640EDA /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				D491743E2BFCFFFB00640EDA /* Tokens.swift */,
+				D49174412BFD00D400640EDA /* ActionTokens.swift */,
+				D49174432BFD011600640EDA /* EntityTokens.swift */,
+				D49174452BFD022E00640EDA /* GremlinTokens.swift */,
+			);
+			path = Tokens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +211,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D491742A2BF8F12C00640EDA /* ArenaView.swift in Sources */,
+				D41199992BFE4CDB00F4EC33 /* AVSetColor.swift in Sources */,
+				D49174422BFD00D400640EDA /* ActionTokens.swift in Sources */,
+				D49174332BF924B200640EDA /* ActionsEditDisplayAttributesView.swift in Sources */,
+				D491742D2BF8F41300640EDA /* DashboardView.swift in Sources */,
+				D49174442BFD011600640EDA /* EntityTokens.swift in Sources */,
+				D49174312BF91B4200640EDA /* ActionsEditView.swift in Sources */,
+				D49174352BF9259500640EDA /* ActionsEditSpaceAttributesView.swift in Sources */,
 				D491741D2BF8F0BF00640EDA /* ContentView.swift in Sources */,
+				D49174462BFD022E00640EDA /* GremlinTokens.swift in Sources */,
 				D491741B2BF8F0BF00640EDA /* GilliganApp.swift in Sources */,
+				D49174372BF95FFB00640EDA /* ActionsSliderView+CGFloat.swift in Sources */,
+				D41199972BFD8CD000F4EC33 /* AVFadeBy.swift in Sources */,
+				D41199952BFD8A8200F4EC33 /* AVFadeTo.swift in Sources */,
+				D411999B2BFE507700F4EC33 /* AVSetColorBlendFactor.swift in Sources */,
+				D491743B2BFCFA0600640EDA /* ActionsSliderView+TimeInterval.swift in Sources */,
+				D491742F2BF918DB00640EDA /* ToolsView.swift in Sources */,
+				D491743F2BFCFFFB00640EDA /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
