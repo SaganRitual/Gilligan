@@ -5,7 +5,8 @@ import SwiftUI
 class AppState: ObservableObject {
     @Published var currentToolsTab: ToolsViewTabId = .actions
     @Published var currentActionsTab: ActionsEditViewTabId = .display
-    @Published var currentActionsEditMode: Tokens.ActionType = .fadeBy
+    @Published var currentDisplayActionsEditMode: Tokens.ActionType = .fadeBy
+    @Published var currentSpaceActionsEditMode: Tokens.ActionType = .moveTo
 
     var gremlins = [Tokens.Gremlin]()
     var selectedEntities = [Tokens.Entity]()
@@ -103,7 +104,8 @@ class AppState: ObservableObject {
 
         selectedGremlin.selectedActionSS = ss
         sctActionEdit += 1
-        currentActionsEditMode = action.type
+
+        setEditMode(action.type)
     }
 
     func select(_ entity: Tokens.Entity, add: Bool = false) {
@@ -114,12 +116,20 @@ class AppState: ObservableObject {
         sctDashboard += 1
 
         if selectedGremlin.selectedActionSS > -1 {
-            currentActionsEditMode = selectedGremlin.selectedAction.type
+            setEditMode(selectedGremlin.selectedAction.type)
         } else {
-            currentActionsEditMode = .fadeBy
+            setEditMode(.nothing)
         }
 
         sctActionEdit += 1
+    }
+
+    func setEditMode(_ actionType: Tokens.ActionType) {
+        if currentActionsTab == .display {
+            currentDisplayActionsEditMode = actionType
+        } else {
+            currentSpaceActionsEditMode = actionType
+        }
     }
 }
 
@@ -139,34 +149,35 @@ extension AppState {
         if selectionCountMode == .single && selectedEntityMode == .gremlin && !selectedGremlin.actionTokens.isEmpty {
             return selectedGremlin.selectedAction
         } else {
-            switch selectedGremlin.selectedAction.type {
-            case .fadeBy:
-                return actionFadeBy
-            case .fadeTo:
-                return actionFadeTo
-            case .moveBy:
-                return actionMoveBy
-            case .moveTo:
-                return actionMoveTo
-            case .resizeBy:
-                return actionResizeBy
-            case .resizeTo:
-                return actionResizeTo
-            case .rotateBy:
-                return actionRotateBy
-            case .rotateTo:
-                return actionRotateTo
-            case .scaleByScalar:
-                return actionScaleByScalar
-            case .scaleToScalar:
-                return actionScaleToScalar
-            case .scaleByVector:
-                return actionScaleByVector
-            case .scaleToVector:
-                return actionScaleToVector
-            default:
-                fatalError()
-            }
+            fatalError()
+//            switch selectedGremlin.selectedAction.type {
+//            case .fadeBy:
+//                return actionFadeBy
+//            case .fadeTo:
+//                return actionFadeTo
+//            case .moveBy:
+//                return actionMoveBy
+//            case .moveTo:
+//                return actionMoveTo
+//            case .resizeBy:
+//                return actionResizeBy
+//            case .resizeTo:
+//                return actionResizeTo
+//            case .rotateBy:
+//                return actionRotateBy
+//            case .rotateTo:
+//                return actionRotateTo
+//            case .scaleByScalar:
+//                return actionScaleByScalar
+//            case .scaleToScalar:
+//                return actionScaleToScalar
+//            case .scaleByVector:
+//                return actionScaleByVector
+//            case .scaleToVector:
+//                return actionScaleToVector
+//            default:
+//                fatalError()
+//            }
         }
     }
 
@@ -219,7 +230,7 @@ extension AppState {
         case .display:
             let newToken: Tokens.Action
 
-            switch currentActionsEditMode {
+            switch currentDisplayActionsEditMode {
             case .fadeBy:
                 newToken = Tokens.ActionFadeBy(actionFadeBy)
             case .fadeTo:
@@ -250,7 +261,7 @@ extension AppState {
         case .space:
             let newToken: Tokens.Action
 
-            switch currentActionsEditMode {
+            switch currentSpaceActionsEditMode {
             case .moveBy:
                 newToken = Tokens.ActionMoveBy(actionMoveBy)
             case .moveTo:

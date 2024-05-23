@@ -5,7 +5,7 @@ import Foundation
 extension Tokens {
     
     enum ActionType {
-        case none, addActionDummyCategory
+        case nothing, addActionDummyCategory
 
         // Display attributes
         case fadeBy, fadeTo, scaleByScalar, scaleByVector, scaleToScalar, scaleToVector, setColor, setColorBlendFactor

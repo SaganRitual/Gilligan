@@ -7,7 +7,7 @@ struct AGSpaceAttributes: View {
 
     var body: some View {
         VStack {
-            Picker(selection: $appState.currentActionsEditMode, label: Text("Action:")) {
+            Picker(selection: $appState.currentSpaceActionsEditMode, label: Text("Action:")) {
                 Text("Follow Path")
                     .tag(Tokens.ActionType.followPath)
 
@@ -32,9 +32,12 @@ struct AGSpaceAttributes: View {
             .pickerStyle(RadioGroupPickerStyle())
             .padding()
 
-            switch appState.currentActionsEditMode {
+            switch appState.currentSpaceActionsEditMode {
             case .followPath:
                 fatalError("Haven't figured out how to approach this yet")
+
+            case .nothing:
+                AVMoveBy()
 
             case .moveBy:
                 AVMoveBy()
@@ -55,7 +58,7 @@ struct AGSpaceAttributes: View {
                 AVRotateTo()
 
             default:
-                fatalError()
+                fatalError("currentSpaceActionsEditMode should not be \(appState.currentSpaceActionsEditMode)")
             }
         }
         .padding()

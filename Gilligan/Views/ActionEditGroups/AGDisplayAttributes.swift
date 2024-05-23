@@ -8,7 +8,7 @@ struct AGDisplayAttributes: View {
     var body: some View {
 
         VStack {
-            Picker(selection: $appState.currentActionsEditMode, label: Text("Action:")) {
+            Picker(selection: $appState.currentDisplayActionsEditMode, label: Text("Action:")) {
                 Text("Fade By")
                     .tag(Tokens.ActionType.fadeBy)
 
@@ -25,7 +25,10 @@ struct AGDisplayAttributes: View {
             .padding()
 
             ZStack {
-                switch appState.currentActionsEditMode {
+                switch appState.currentDisplayActionsEditMode {
+                case .nothing:
+                    AVFadeBy()
+
                 case .fadeBy:
                     AVFadeBy()
 
@@ -39,7 +42,7 @@ struct AGDisplayAttributes: View {
                     AVSetColorBlendFactor()
 
                 default:
-                    fatalError()
+                    fatalError("currentDisplayActionsEditMode should not be \(appState.currentDisplayActionsEditMode)")
                 }
             }
             .padding()
