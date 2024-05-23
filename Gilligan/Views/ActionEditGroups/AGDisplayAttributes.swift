@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct ActionsEditDisplayAttributesView: View {
+struct AGDisplayAttributes: View {
     @EnvironmentObject var appState: AppState
 
     var body: some View {
@@ -49,5 +49,5 @@ struct ActionsEditDisplayAttributesView: View {
 }
 
 #Preview {
-    ActionsEditDisplayAttributesView()
+    AGDisplayAttributes()
 }

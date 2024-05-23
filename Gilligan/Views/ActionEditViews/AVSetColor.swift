@@ -66,7 +66,3 @@ struct AVSetColor: View {
         }
     }
 }
-
-#Preview {
-    AVSetColor()
-}

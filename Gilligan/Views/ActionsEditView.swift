@@ -44,13 +44,13 @@ struct ActionsEditView: View {
     var body: some View {
         VStack {
             TabView(selection: $appState.currentActionsTab) {
-                ActionsEditDisplayAttributesView()
+                AGDisplayAttributes()
                     .tabItem {
                         Label("Display", systemImage: "moon.fill")
                     }
                     .tag(AppState.ActionsEditViewTabId.display)
 
-                ActionsEditSpaceAttributesView()
+                AGSpaceAttributes()
                     .tabItem {
                         Label("Space", systemImage: "figure.run")
                     }

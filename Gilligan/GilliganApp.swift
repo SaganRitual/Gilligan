@@ -16,6 +16,16 @@ class AppState: ObservableObject {
 
     @Published var actionFadeBy = Tokens.ActionFadeBy()
     @Published var actionFadeTo = Tokens.ActionFadeTo()
+    @Published var actionMoveBy = Tokens.ActionMoveBy()
+    @Published var actionMoveTo = Tokens.ActionMoveTo()
+    @Published var actionResizeBy = Tokens.ActionResizeBy()
+    @Published var actionResizeTo = Tokens.ActionResizeTo()
+    @Published var actionRotateBy = Tokens.ActionRotateBy()
+    @Published var actionRotateTo = Tokens.ActionRotateTo()
+    @Published var actionScaleByScalar = Tokens.ActionScaleByScalar()
+    @Published var actionScaleToScalar = Tokens.ActionScaleToScalar()
+    @Published var actionScaleByVector = Tokens.ActionScaleByVector()
+    @Published var actionScaleToVector = Tokens.ActionScaleToVector()
     @Published var actionSetColor = Tokens.ActionSetColor()
     @Published var actionSetColorBlendFactor = Tokens.ActionSetColorBlendFactor()
 
@@ -50,6 +60,36 @@ class AppState: ObservableObject {
 
         case .fadeTo:
             actionFadeTo.copyFrom(action)
+
+        case .moveBy:
+            actionMoveBy.copyFrom(action)
+
+        case .moveTo:
+            actionMoveTo.copyFrom(action)
+
+        case .resizeBy:
+            actionResizeBy.copyFrom(action)
+
+        case .resizeTo:
+            actionResizeTo.copyFrom(action)
+
+        case .rotateBy:
+            actionRotateBy.copyFrom(action)
+
+        case .rotateTo:
+            actionRotateTo.copyFrom(action)
+
+        case .scaleByScalar:
+            actionScaleByScalar.copyFrom(action)
+
+        case .scaleToScalar:
+            actionScaleToScalar.copyFrom(action)
+
+        case .scaleByVector:
+            actionScaleByVector.copyFrom(action)
+
+        case .scaleToVector:
+            actionScaleToVector.copyFrom(action)
 
         case .setColor:
             actionSetColor.copyFrom(action)
@@ -104,6 +144,26 @@ extension AppState {
                 return actionFadeBy
             case .fadeTo:
                 return actionFadeTo
+            case .moveBy:
+                return actionMoveBy
+            case .moveTo:
+                return actionMoveTo
+            case .resizeBy:
+                return actionResizeBy
+            case .resizeTo:
+                return actionResizeTo
+            case .rotateBy:
+                return actionRotateBy
+            case .rotateTo:
+                return actionRotateTo
+            case .scaleByScalar:
+                return actionScaleByScalar
+            case .scaleToScalar:
+                return actionScaleToScalar
+            case .scaleByVector:
+                return actionScaleByVector
+            case .scaleToVector:
+                return actionScaleToVector
             default:
                 fatalError()
             }
@@ -164,6 +224,14 @@ extension AppState {
                 newToken = Tokens.ActionFadeBy(actionFadeBy)
             case .fadeTo:
                 newToken = Tokens.ActionFadeTo(actionFadeTo)
+            case .scaleByScalar:
+                newToken = Tokens.ActionScaleByScalar(actionScaleByScalar)
+            case .scaleToScalar:
+                newToken = Tokens.ActionScaleToScalar(actionScaleToScalar)
+            case .scaleByVector:
+                newToken = Tokens.ActionScaleByVector(actionScaleByVector)
+            case .scaleToVector:
+                newToken = Tokens.ActionScaleToVector(actionScaleToVector)
             case .setColor:
                 newToken = Tokens.ActionSetColor(actionSetColor)
             case .setColorBlendFactor:
@@ -178,8 +246,29 @@ extension AppState {
 
         case .scale:
             break
+
         case .space:
-            break
+            let newToken: Tokens.Action
+
+            switch currentActionsEditMode {
+            case .moveBy:
+                newToken = Tokens.ActionMoveBy(actionMoveBy)
+            case .moveTo:
+                newToken = Tokens.ActionMoveTo(actionMoveTo)
+            case .resizeBy:
+                newToken = Tokens.ActionResizeBy(actionResizeBy)
+            case .resizeTo:
+                newToken = Tokens.ActionResizeTo(actionResizeTo)
+            case .rotateBy:
+                newToken = Tokens.ActionRotateBy(actionRotateBy)
+            case .rotateTo:
+                newToken = Tokens.ActionRotateTo(actionRotateTo)
+            default:
+                fatalError()
+            }
+
+            selectedGremlin.selectedActionSS = selectedGremlin.actionTokens.count
+            selectedGremlin.actionTokens.append(newToken)
         }
     }
 }
